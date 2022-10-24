@@ -60,6 +60,7 @@
 		1A51858D2906AFF800BEF5FD /* TopMovies */ = {
 			isa = PBXGroup;
 			children = (
+				1A5185AE2906C40E00BEF5FD /* Services */,
 				1A5185AB2906BE4D00BEF5FD /* ViewModels */,
 				1A5185A82906B5AE00BEF5FD /* Utils */,
 				1A5185A52906B4F700BEF5FD /* Views */,
@@ -103,6 +104,13 @@
 				1A5185AC2906BE6800BEF5FD /* TopMoviesViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1A5185AE2906C40E00BEF5FD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

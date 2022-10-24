@@ -9,4 +9,12 @@ import Foundation
 
 struct TopMoviesViewModel {
     
+    func numberOfItemsInSection(_ section: Int) -> Int {
+        return 10
+    }
+    
+    func titleForItemAtIndexPath(_ indexPath: IndexPath) -> String {
+        //TODO: Remove hardcoded value - get it from the model object retrieved from the Service.
+        return "Jaws Returns!"
+    }
 }

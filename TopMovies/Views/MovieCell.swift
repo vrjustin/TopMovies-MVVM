@@ -10,7 +10,7 @@ import UIKit
 
 class MovieCell: UITableViewCell {
     
-    private let movieTitleLabel: UILabel = {
+    let movieTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Return of the Jedi"
         label.numberOfLines = 1

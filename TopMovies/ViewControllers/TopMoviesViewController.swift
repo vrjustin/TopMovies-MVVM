@@ -55,12 +55,12 @@ class TopMoviesViewController: UITableViewController {
 
 extension TopMoviesViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //TODO: Retrieve this from the viewmodel
-        return 5
+        return viewModel.numberOfItemsInSection(section)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: movieCellReuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: movieCellReuseIdentifier, for: indexPath) as! MovieCell
+        cell.movieTitleLabel.text = viewModel.titleForItemAtIndexPath(indexPath)
         return cell
     }
 }
