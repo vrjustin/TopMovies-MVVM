@@ -9,21 +9,19 @@
 /* Begin PBXBuildFile section */
 		1A51858F2906AFF800BEF5FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A51858E2906AFF800BEF5FD /* AppDelegate.swift */; };
 		1A5185912906AFF800BEF5FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5185902906AFF800BEF5FD /* SceneDelegate.swift */; };
-		1A5185932906AFF800BEF5FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5185922906AFF800BEF5FD /* ViewController.swift */; };
-		1A5185962906AFF800BEF5FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A5185942906AFF800BEF5FD /* Main.storyboard */; };
 		1A5185982906AFF900BEF5FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5185972906AFF900BEF5FD /* Assets.xcassets */; };
 		1A51859B2906AFF900BEF5FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A5185992906AFF900BEF5FD /* LaunchScreen.storyboard */; };
+		1A5185A32906B10000BEF5FD /* TopMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5185A22906B10000BEF5FD /* TopMoviesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A51858B2906AFF800BEF5FD /* TopMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A51858E2906AFF800BEF5FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A5185902906AFF800BEF5FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1A5185922906AFF800BEF5FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1A5185952906AFF800BEF5FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A5185972906AFF900BEF5FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A51859A2906AFF900BEF5FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A51859C2906AFF900BEF5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A5185A22906B10000BEF5FD /* TopMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +54,22 @@
 		1A51858D2906AFF800BEF5FD /* TopMovies */ = {
 			isa = PBXGroup;
 			children = (
+				1A5185A42906B16A00BEF5FD /* ViewControllers */,
 				1A51858E2906AFF800BEF5FD /* AppDelegate.swift */,
 				1A5185902906AFF800BEF5FD /* SceneDelegate.swift */,
-				1A5185922906AFF800BEF5FD /* ViewController.swift */,
-				1A5185942906AFF800BEF5FD /* Main.storyboard */,
 				1A5185972906AFF900BEF5FD /* Assets.xcassets */,
 				1A5185992906AFF900BEF5FD /* LaunchScreen.storyboard */,
 				1A51859C2906AFF900BEF5FD /* Info.plist */,
 			);
 			path = TopMovies;
+			sourceTree = "<group>";
+		};
+		1A5185A42906B16A00BEF5FD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A5185A22906B10000BEF5FD /* TopMoviesViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +132,6 @@
 			files = (
 				1A51859B2906AFF900BEF5FD /* LaunchScreen.storyboard in Resources */,
 				1A5185982906AFF900BEF5FD /* Assets.xcassets in Resources */,
-				1A5185962906AFF800BEF5FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +142,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A5185932906AFF800BEF5FD /* ViewController.swift in Sources */,
 				1A51858F2906AFF800BEF5FD /* AppDelegate.swift in Sources */,
 				1A5185912906AFF800BEF5FD /* SceneDelegate.swift in Sources */,
+				1A5185A32906B10000BEF5FD /* TopMoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1A5185942906AFF800BEF5FD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A5185952906AFF800BEF5FD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1A5185992906AFF900BEF5FD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +288,6 @@
 				INFOPLIST_FILE = TopMovies/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +315,6 @@
 				INFOPLIST_FILE = TopMovies/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
