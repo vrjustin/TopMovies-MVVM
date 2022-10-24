@@ -14,6 +14,7 @@
 		1A5185A32906B10000BEF5FD /* TopMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5185A22906B10000BEF5FD /* TopMoviesViewController.swift */; };
 		1A5185A72906B50D00BEF5FD /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5185A62906B50D00BEF5FD /* MovieCell.swift */; };
 		1A5185AA2906B5C700BEF5FD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5185A92906B5C700BEF5FD /* Extensions.swift */; };
+		1A5185AD2906BE6800BEF5FD /* TopMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5185AC2906BE6800BEF5FD /* TopMoviesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1A5185A22906B10000BEF5FD /* TopMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviesViewController.swift; sourceTree = "<group>"; };
 		1A5185A62906B50D00BEF5FD /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		1A5185A92906B5C700BEF5FD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1A5185AC2906BE6800BEF5FD /* TopMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		1A51858D2906AFF800BEF5FD /* TopMovies */ = {
 			isa = PBXGroup;
 			children = (
+				1A5185AB2906BE4D00BEF5FD /* ViewModels */,
 				1A5185A82906B5AE00BEF5FD /* Utils */,
 				1A5185A52906B4F700BEF5FD /* Views */,
 				1A5185A42906B16A00BEF5FD /* ViewControllers */,
@@ -92,6 +95,14 @@
 				1A5185A92906B5C700BEF5FD /* Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		1A5185AB2906BE4D00BEF5FD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1A5185AC2906BE6800BEF5FD /* TopMoviesViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +178,7 @@
 				1A5185AA2906B5C700BEF5FD /* Extensions.swift in Sources */,
 				1A51858F2906AFF800BEF5FD /* AppDelegate.swift in Sources */,
 				1A5185912906AFF800BEF5FD /* SceneDelegate.swift in Sources */,
+				1A5185AD2906BE6800BEF5FD /* TopMoviesViewModel.swift in Sources */,
 				1A5185A72906B50D00BEF5FD /* MovieCell.swift in Sources */,
 				1A5185A32906B10000BEF5FD /* TopMoviesViewController.swift in Sources */,
 			);
