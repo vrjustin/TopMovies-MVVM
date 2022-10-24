@@ -30,6 +30,12 @@ class TopMoviesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        configureTableView()
+        viewModel.fetchMovies {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     // MARK: - HELPERS
@@ -37,16 +43,12 @@ class TopMoviesViewController: UITableViewController {
     private func setupUI() {
         self.navigationItem.title = "Top Movies"
         self.view.backgroundColor = .white
-        configureTableView()
     }
     
     private func configureTableView() {
-        print("DEBUG: Configure TableView..")
-        
         tableView.register(MovieCell.self, forCellReuseIdentifier: movieCellReuseIdentifier)
         tableView.rowHeight = 80
         tableView.separatorStyle = .singleLine
-        
     }
     
 }
@@ -60,7 +62,7 @@ extension TopMoviesViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: movieCellReuseIdentifier, for: indexPath) as! MovieCell
-        cell.movieTitleLabel.text = viewModel.titleForItemAtIndexPath(indexPath)
+        cell.movieTitleLabel.text = viewModel.titleForItemAtIndexPath(indexPath.row)
         return cell
     }
 }

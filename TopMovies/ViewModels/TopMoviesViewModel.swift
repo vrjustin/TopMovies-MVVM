@@ -7,14 +7,37 @@
 
 import Foundation
 
-struct TopMoviesViewModel {
+class TopMoviesViewModel {
     
-    func numberOfItemsInSection(_ section: Int) -> Int {
-        return 10
+    // MARK: - PROPERTIES
+    
+    var topMoviesService: TopMoviesService!
+    var fetchedMovies: [Movie]?
+    
+    // MARK: - LIFECYCLE
+    
+    init(topMoviesService: TopMoviesService!) {
+        self.topMoviesService = topMoviesService
     }
     
-    func titleForItemAtIndexPath(_ indexPath: IndexPath) -> String {
-        //TODO: Remove hardcoded value - get it from the model object retrieved from the Service.
-        return "Jaws Returns!"
+    // MARK: - API
+    func fetchMovies(completion: @escaping () -> ()) {
+        topMoviesService.fetchMovies { movies in
+            if let movies = movies {
+                self.fetchedMovies = movies
+                completion()
+            }
+        }
+    }
+    
+    // MARK: - TABLEVIEW DATA SOURCE
+    func numberOfItemsInSection(_ section: Int) -> Int {
+        return fetchedMovies?.count ?? 0
+    }
+    
+    func titleForItemAtIndexPath(_ idx: Int) -> String {
+        let movie = fetchedMovies?[idx]
+        guard let title = movie?.name.label else { return "" }
+        return title
     }
 }

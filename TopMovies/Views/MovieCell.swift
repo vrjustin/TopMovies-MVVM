@@ -10,9 +10,8 @@ import UIKit
 
 class MovieCell: UITableViewCell {
     
-    let movieTitleLabel: UILabel = {
+    var movieTitleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Return of the Jedi"
         label.numberOfLines = 1
         label.font = UIFont.boldSystemFont(ofSize: 24)
         return label
