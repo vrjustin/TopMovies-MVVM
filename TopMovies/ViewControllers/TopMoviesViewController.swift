@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 private let movieCellReuseIdentifier = "movieCellReuseIdentifier"
 
@@ -47,7 +48,7 @@ class TopMoviesViewController: UITableViewController {
     
     private func configureTableView() {
         tableView.register(MovieCell.self, forCellReuseIdentifier: movieCellReuseIdentifier)
-        tableView.rowHeight = 80
+        tableView.rowHeight = 160
         tableView.separatorStyle = .singleLine
     }
     
@@ -62,7 +63,11 @@ extension TopMoviesViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: movieCellReuseIdentifier, for: indexPath) as! MovieCell
+        
         cell.movieTitleLabel.text = viewModel.titleForItemAtIndexPath(indexPath.row)
+        cell.yearTitleLabel.text = viewModel.releaseYearForItemAtIndex(indexPath.row)
+        cell.movieImageView.sd_setImage(with: viewModel.posterForItemAtIndex(indexPath.row))
+        
         return cell
     }
 }

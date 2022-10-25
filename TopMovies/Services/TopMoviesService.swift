@@ -27,9 +27,14 @@ struct TopMoviesService {
                 return
             }
             
-            let moviesResponse = try! JSONDecoder().decode(TopMoviesResponse.self, from: data)
-            let topMovies = moviesResponse.topMovies.movies
-            completion(topMovies)
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+            
+            //TODO: Remove the force try! this should be optional try with catch of error.
+            if let moviesResponse = try? decoder.decode(TopMoviesResponse.self, from: data) {
+                let topMovies = moviesResponse.topMovies.movies
+                completion(topMovies)
+            }
 
         }
         task.resume()
