@@ -37,7 +37,18 @@ class TopMoviesViewModel {
     
     func titleForItemAtIndexPath(_ idx: Int) -> String {
         let movie = fetchedMovies?[idx]
-        guard let title = movie?.name.label else { return "" }
+        guard let title = movie?.name.value else { return "" }
         return title
+    }
+    
+    func releaseYearForItemAtIndex(_ idx: Int) -> String {
+        let movie = fetchedMovies?[idx]
+        guard let releaseDateDate = movie?.releaseDate.value else { return "" }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, y"
+        let str = dateFormatter.string(from: releaseDateDate)
+        
+        return str
     }
 }
