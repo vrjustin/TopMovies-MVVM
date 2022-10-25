@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 private let movieCellReuseIdentifier = "movieCellReuseIdentifier"
 
@@ -65,6 +66,7 @@ extension TopMoviesViewController {
         
         cell.movieTitleLabel.text = viewModel.titleForItemAtIndexPath(indexPath.row)
         cell.yearTitleLabel.text = viewModel.releaseYearForItemAtIndex(indexPath.row)
+        cell.movieImageView.sd_setImage(with: viewModel.posterForItemAtIndex(indexPath.row))
         
         return cell
     }

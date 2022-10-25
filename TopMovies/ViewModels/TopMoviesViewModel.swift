@@ -51,4 +51,27 @@ class TopMoviesViewModel {
         
         return str
     }
+    
+    func posterForItemAtIndex(_ idx: Int) -> URL? {
+        let movie = fetchedMovies?[idx]
+        guard let posters = movie?.moviePosters else { return nil }
+        var largestPosterIdx = 0
+        var largestPosterHeight = 0
+        
+        for i in 0..<posters.count {
+            let poster = posters[i]
+            let posterHeightStr = poster.attributes["height"]
+            guard let posterHeightStr = posterHeightStr else { return nil }
+            if let posterHeight = Int(posterHeightStr) {
+                if posterHeight > largestPosterHeight {
+                    largestPosterHeight = posterHeight
+                    largestPosterIdx = i
+                }
+            }
+        }
+        
+        let largestPoster = posters[largestPosterIdx]
+        
+        return URL(string: largestPoster.value)
+    }
 }

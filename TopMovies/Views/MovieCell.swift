@@ -10,7 +10,7 @@ import UIKit
 
 class MovieCell: UITableViewCell {
     
-    private lazy var movieImageView: UIImageView = {
+    lazy var movieImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true

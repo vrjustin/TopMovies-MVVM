@@ -11,10 +11,12 @@ import Foundation
 struct Movie: Decodable {
     let name: Name
     let releaseDate: ReleaseDate
+    let moviePosters: [MoviePoster]
     
     private enum CodingKeys: String, CodingKey {
         case name = "im:name"
         case releaseDate = "im:releaseDate"
+        case moviePosters = "im:image"
     }
 }
 
@@ -31,6 +33,16 @@ struct ReleaseDate: Decodable {
     
     private enum CodingKeys: String, CodingKey {
         case value = "label"
+    }
+}
+
+struct MoviePoster: Decodable {
+    let value: String
+    let attributes: [String:String]
+    
+    private enum CodingKeys: String, CodingKey {
+        case value = "label"
+        case attributes = "attributes"
     }
 }
 
