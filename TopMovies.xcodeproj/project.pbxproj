@@ -27,6 +27,7 @@
 		1A835D51290961B50065823F /* TopMoviesServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A835D4C290955FF0065823F /* TopMoviesServiceMock.swift */; };
 		1A835D52290966B40065823F /* TopMoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5185AF2906C49800BEF5FD /* TopMoviesService.swift */; };
 		1A835D53290967230065823F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5185DB2907119800BEF5FD /* Movie.swift */; };
+		1A835D5529096B310065823F /* MovieCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A835D5429096B310065823F /* MovieCellTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		1A835D43290952CA0065823F /* TopMoviesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviesViewModelTests.swift; sourceTree = "<group>"; };
 		1A835D4C290955FF0065823F /* TopMoviesServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviesServiceMock.swift; sourceTree = "<group>"; };
 		1A835D4F2909611D0065823F /* MoviesServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesServiceFactory.swift; sourceTree = "<group>"; };
+		1A835D5429096B310065823F /* MovieCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			children = (
 				1A835D4B290955F20065823F /* Mocks */,
 				1A835D43290952CA0065823F /* TopMoviesViewModelTests.swift */,
+				1A835D5429096B310065823F /* MovieCellTests.swift */,
 			);
 			path = TopMoviesTests;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				1A835D52290966B40065823F /* TopMoviesService.swift in Sources */,
 				1A835D53290967230065823F /* Movie.swift in Sources */,
 				1A835D44290952CA0065823F /* TopMoviesViewModelTests.swift in Sources */,
+				1A835D5529096B310065823F /* MovieCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
