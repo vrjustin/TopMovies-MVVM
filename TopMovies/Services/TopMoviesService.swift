@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct TopMoviesService {
+protocol MoviesService {
+    func fetchMovies(completion: @escaping ([Movie]?) -> ())
+}
+
+struct TopMoviesService: MoviesService {
     
     func fetchMovies(completion: @escaping ([Movie]?) -> ()) {
         //fetch the data

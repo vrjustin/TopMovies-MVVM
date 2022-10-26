@@ -10,8 +10,8 @@ import Foundation
 
 struct Movie: Decodable {
     let name: Name
-    let releaseDate: ReleaseDate
-    let moviePosters: [MoviePoster]
+    let releaseDate: ReleaseDate?
+    let moviePosters: [MoviePoster]?
     
     private enum CodingKeys: String, CodingKey {
         case name = "im:name"

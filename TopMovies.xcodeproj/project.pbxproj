@@ -19,8 +19,14 @@
 		1A5185AD2906BE6800BEF5FD /* TopMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5185AC2906BE6800BEF5FD /* TopMoviesViewModel.swift */; };
 		1A5185B02906C49800BEF5FD /* TopMoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5185AF2906C49800BEF5FD /* TopMoviesService.swift */; };
 		1A5185DC2907119800BEF5FD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5185DB2907119800BEF5FD /* Movie.swift */; };
-		1A5185DF2908152E00BEF5FD /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1A5185DE2908152E00BEF5FD /* SDWebImage */; };
 		1A835D44290952CA0065823F /* TopMoviesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A835D43290952CA0065823F /* TopMoviesViewModelTests.swift */; };
+		1A835D47290955010065823F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1A835D46290955010065823F /* SDWebImage */; };
+		1A835D4A2909552B0065823F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1A835D492909552B0065823F /* SDWebImage */; };
+		1A835D4D290955FF0065823F /* TopMoviesServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A835D4C290955FF0065823F /* TopMoviesServiceMock.swift */; };
+		1A835D502909611D0065823F /* MoviesServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A835D4F2909611D0065823F /* MoviesServiceFactory.swift */; };
+		1A835D51290961B50065823F /* TopMoviesServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A835D4C290955FF0065823F /* TopMoviesServiceMock.swift */; };
+		1A835D52290966B40065823F /* TopMoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5185AF2906C49800BEF5FD /* TopMoviesService.swift */; };
+		1A835D53290967230065823F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5185DB2907119800BEF5FD /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +56,8 @@
 		1A5185DB2907119800BEF5FD /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		1A835D3A290952A30065823F /* TopMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A835D43290952CA0065823F /* TopMoviesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviesViewModelTests.swift; sourceTree = "<group>"; };
+		1A835D4C290955FF0065823F /* TopMoviesServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviesServiceMock.swift; sourceTree = "<group>"; };
+		1A835D4F2909611D0065823F /* MoviesServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesServiceFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A5185DF2908152E00BEF5FD /* SDWebImage in Frameworks */,
+				1A835D47290955010065823F /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A835D4A2909552B0065823F /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +86,7 @@
 				1A51858D2906AFF800BEF5FD /* TopMovies */,
 				1A835D3B290952A30065823F /* TopMoviesTests */,
 				1A51858C2906AFF800BEF5FD /* Products */,
+				1A835D482909552B0065823F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +102,7 @@
 		1A51858D2906AFF800BEF5FD /* TopMovies */ = {
 			isa = PBXGroup;
 			children = (
+				1A835D4E290960E20065823F /* Factories */,
 				1A5185DA2907118500BEF5FD /* Models */,
 				1A5185AE2906C40E00BEF5FD /* Services */,
 				1A5185AB2906BE4D00BEF5FD /* ViewModels */,
@@ -160,9 +171,33 @@
 		1A835D3B290952A30065823F /* TopMoviesTests */ = {
 			isa = PBXGroup;
 			children = (
+				1A835D4B290955F20065823F /* Mocks */,
 				1A835D43290952CA0065823F /* TopMoviesViewModelTests.swift */,
 			);
 			path = TopMoviesTests;
+			sourceTree = "<group>";
+		};
+		1A835D482909552B0065823F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A835D4B290955F20065823F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				1A835D4C290955FF0065823F /* TopMoviesServiceMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		1A835D4E290960E20065823F /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				1A835D4F2909611D0065823F /* MoviesServiceFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,7 +217,7 @@
 			);
 			name = TopMovies;
 			packageProductDependencies = (
-				1A5185DE2908152E00BEF5FD /* SDWebImage */,
+				1A835D46290955010065823F /* SDWebImage */,
 			);
 			productName = TopMovies;
 			productReference = 1A51858B2906AFF800BEF5FD /* TopMovies.app */;
@@ -202,6 +237,9 @@
 				1A835D3F290952A30065823F /* PBXTargetDependency */,
 			);
 			name = TopMoviesTests;
+			packageProductDependencies = (
+				1A835D492909552B0065823F /* SDWebImage */,
+			);
 			productName = TopMoviesTests;
 			productReference = 1A835D3A290952A30065823F /* TopMoviesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -236,7 +274,7 @@
 			);
 			mainGroup = 1A5185822906AFF800BEF5FD;
 			packageReferences = (
-				1A5185DD2908152E00BEF5FD /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				1A835D45290955010065823F /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 1A51858C2906AFF800BEF5FD /* Products */;
 			projectDirPath = "";
@@ -275,8 +313,10 @@
 				1A5185AA2906B5C700BEF5FD /* Extensions.swift in Sources */,
 				1A51858F2906AFF800BEF5FD /* AppDelegate.swift in Sources */,
 				1A5185912906AFF800BEF5FD /* SceneDelegate.swift in Sources */,
+				1A835D502909611D0065823F /* MoviesServiceFactory.swift in Sources */,
 				1A5185AD2906BE6800BEF5FD /* TopMoviesViewModel.swift in Sources */,
 				1A5185B02906C49800BEF5FD /* TopMoviesService.swift in Sources */,
+				1A835D51290961B50065823F /* TopMoviesServiceMock.swift in Sources */,
 				1A5185A72906B50D00BEF5FD /* MovieCell.swift in Sources */,
 				1A2ABFF62908616F004B7F65 /* MovieDetailViewController.swift in Sources */,
 				1A5185DC2907119800BEF5FD /* Movie.swift in Sources */,
@@ -289,6 +329,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A835D4D290955FF0065823F /* TopMoviesServiceMock.swift in Sources */,
+				1A835D52290966B40065823F /* TopMoviesService.swift in Sources */,
+				1A835D53290967230065823F /* Movie.swift in Sources */,
 				1A835D44290952CA0065823F /* TopMoviesViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,7 +608,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1A5185DD2908152E00BEF5FD /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+		1A835D45290955010065823F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
@@ -576,9 +619,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1A5185DE2908152E00BEF5FD /* SDWebImage */ = {
+		1A835D46290955010065823F /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1A5185DD2908152E00BEF5FD /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			package = 1A835D45290955010065823F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		1A835D492909552B0065823F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A835D45290955010065823F /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */

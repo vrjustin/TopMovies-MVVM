@@ -6,15 +6,18 @@
 //
 
 import XCTest
+@testable import TopMovies
 
 final class TopMoviesViewModelTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func test_TopMoviesViewModelTests_returnsTitleForItemAtIndexPath() {
+        
+        let sut = TopMoviesViewModel(topMoviesService: MoviesServiceFactory.create())
+        sut.fetchMovies {}
+        
+        let title = sut.titleForItemAtIndexPath(1)
+        
+        XCTAssertEqual(title, "Test Movie Title2")
     }
 
 }

@@ -11,12 +11,12 @@ class TopMoviesViewModel {
     
     // MARK: - PROPERTIES
     
-    var topMoviesService: TopMoviesService!
+    var topMoviesService: MoviesService!
     var fetchedMovies: [Movie]?
     
     // MARK: - LIFECYCLE
     
-    init(topMoviesService: TopMoviesService!) {
+    init(topMoviesService: MoviesService!) {
         self.topMoviesService = topMoviesService
     }
     
@@ -43,7 +43,7 @@ class TopMoviesViewModel {
     
     func releaseYearForItemAtIndex(_ idx: Int) -> String {
         let movie = fetchedMovies?[idx]
-        guard let releaseDateDate = movie?.releaseDate.value else { return "" }
+        guard let releaseDateDate = movie?.releaseDate?.value else { return "" }
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM d, y"
