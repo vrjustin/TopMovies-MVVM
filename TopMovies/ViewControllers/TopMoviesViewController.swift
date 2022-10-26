@@ -71,3 +71,19 @@ extension TopMoviesViewController {
         return cell
     }
 }
+
+// MARK: - TABLEVIEW Delegate
+
+extension TopMoviesViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected movie cell at index: \(indexPath.row)")
+        //create a MovieDetailViewModel that we will instantiate with the selected Movie as retrieved from the viewModel.fetchedMovies[indexPath.row]
+        guard let movie = viewModel.fetchedMovies?[indexPath.row] else { return }
+        let movieDetailVM = MovieDetailsViewModel(movie: movie)
+        
+        let movieDetailViewController = MovieDetailViewController(viewModel: movieDetailVM)
+        navigationController?.present(movieDetailViewController, animated: true)
+    }
+    
+}
